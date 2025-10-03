@@ -2,6 +2,9 @@
 import { useState } from "react";
 import { User, Mail, Phone, Settings, Calendar } from "lucide-react";
 
+// Import foto profil lokal
+import FotoProfil from "../assets/FotoProfil.png";
+
 export default function ProfilePage() {
   const [activeTab, setActiveTab] = useState("info");
 
@@ -11,9 +14,9 @@ export default function ProfilePage() {
         {/* Header */}
         <div className="flex flex-col md:flex-row items-center md:items-start bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl p-6 md:p-10 shadow-xl text-white">
           <img
-            src="https://i.pravatar.cc/150?img=32"
+            src={FotoProfil}
             alt="Profile"
-            className="w-28 h-28 md:w-36 md:h-36 rounded-full border-4 border-white shadow-lg"
+            className="w-28 h-28 md:w-36 md:h-36 rounded-full border-4 border-white shadow-lg object-cover"
           />
           <div className="mt-4 md:mt-0 md:ml-8">
             <h1 className="text-2xl md:text-3xl font-bold">Raka Setiawan</h1>
@@ -58,19 +61,27 @@ export default function ProfilePage() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="flex items-center gap-3">
                 <User className="text-indigo-500" />
-                <p className="text-gray-700">Nama: <span className="font-medium">Raka Setiawan</span></p>
+                <p className="text-gray-700">
+                  Nama: <span className="font-medium">Raka Setiawan</span>
+                </p>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="text-indigo-500" />
-                <p className="text-gray-700">Email: <span className="font-medium">raka@mail.com</span></p>
+                <p className="text-gray-700">
+                  Email: <span className="font-medium">raka@mail.com</span>
+                </p>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="text-indigo-500" />
-                <p className="text-gray-700">Telepon: <span className="font-medium">+62 812 3456 7890</span></p>
+                <p className="text-gray-700">
+                  Telepon: <span className="font-medium">+62 812 3456 7890</span>
+                </p>
               </div>
               <div className="flex items-center gap-3">
                 <Calendar className="text-indigo-500" />
-                <p className="text-gray-700">Bergabung: <span className="font-medium">Jan 2023</span></p>
+                <p className="text-gray-700">
+                  Bergabung: <span className="font-medium">Jan 2023</span>
+                </p>
               </div>
             </div>
           )}
@@ -91,7 +102,9 @@ export default function ProfilePage() {
               <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
                 <Settings className="text-indigo-500" /> Pengaturan Akun
               </h2>
-              <p className="text-gray-600">Fitur pengaturan akun akan ditambahkan di sini...</p>
+              <p className="text-gray-600">
+                Fitur pengaturan akun akan ditambahkan di sini...
+              </p>
             </div>
           )}
         </div>
